@@ -14,15 +14,43 @@
             </div>
         </div>
         <div class="list">
-            <ion-md-input  style=" padding-top:0px; border:0px solid #CCC;" placeholder="Email/Login" highlight-color="balanced" type="text"></ion-md-input>
+            <ion-md-input  ng-model="senha.email" style=" padding-top:0px; border:0px solid #CCC;" placeholder="E-mail" highlight-color="balanced" type="text"></ion-md-input>
+            <div class="msgError">{{error}}</div>
         </div>
         <div class="padding">
-            <button ui-sref="app.login" class="button button-full button-energized-900 ink">Enviar</button>
+            <button u i-s ref="app.login" ng-click="validaLogin()"  ng-cl ick="openModal()" class="button button-full button-energized-900 ink">Enviar</button>
         </div>
+        <script id="senha-modal.html" type="text/ng-template">
+			<ion-modal-view class="ion-modal-view">
+				<ion-header-bar class="ion-header-bar">
+					<h4>Confirmação de cadastro</h4>
+				</ion-header-bar>
+				<ion-content>
+				<div class="ConteudoModal">
+					<div>
+						Enviamos uma nova senha para o e-mail <b>{{senha.email}}</b>. 
+					</div>
+					<!-- -- >
+					<div>
+						<b>Importante</b> 
+					</div>
+					<div>
+						Eventualmente, alguns servidores de email arquivam as novas mensagem como Spam por favor caso não encontre a mensagem na <b>caixa de entrada</b> procurem entre os Spam. 
+					</div>
+					</div>
+					<!-- -->
+					<div class ="CloseModal">
+					<button class="button button-full button-energized-900 ink" ng-click = "closeModal()">Close Modal</button>
+					</div>
+				</ion-content>
+			</ion-modal-view>
+        </script>
+        <!-- -- >
         <div class="button-bar social-login">
             <button class="button button-small button-border icon-left ion-social-google button-assertive-900">Google+</button>
             <button class="button button-small button-border icon-left ion-social-twitter button-calm-900">Twitter</button>
             <button class="button button-small button-border icon-left ion-social-facebook button-positive-900">Facebook</button>
         </div>
+        <!-- -->
     </ion-content>
 </ion-view>

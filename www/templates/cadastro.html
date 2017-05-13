@@ -20,13 +20,9 @@
             <ion-md-input  style=" padding-top:0px; border:0px solid #CCC;" placeholder="Repetir a senha"  ng-model='cadastro.senharepetir' highlight-color="balanced" type="password"></ion-md-input>
         </div>
         <div class="cadastro-link">
-        AQUI --- {{cadastro.nome}}
-        </div>
-        <div class="cadastro-link">
-            <label class="checkbox wave">
-   <input type="checkbox">
-</label>
-            Li e concordo com os <a ui-sref="app.termos">Termos de uso</a> e <a ui-sref="app.politica">Pol&iacute;tica e Privacidade</a>.
+            <label class="checkbox">
+   				<div style="float:left;"><input type="checkbox"></div><div style="margin-left:40px;"> Li e concordo com os <a ui-sref="app.termos">Termos de uso</a> e <a ui-sref="app.politica">Pol&iacute;tica e Privacidade</a>.</div>
+        	</label>
         </div>
         <div class="padding">
             <button  ui -s ref="app.login" ng-click="openModal()" class="button button-full button-energized-900 ink">Cadastrar</button>
@@ -40,28 +36,32 @@
         </div>
         
         
-		<script id="my-modal.html" type="text/ng-template">
-			<ion-modal-view>
+		<script id="cadastro-modal.html" type="text/ng-template">
+			<ion-modal-view class="ion-modal-view">
 				<ion-header-bar class="ion-header-bar">
 					<h4>Confirmação de cadastro</h4>
 				</ion-header-bar>
-				<ion-content class="ion-modal-view">
+				<ion-content>
+				<div class="ConteudoModal">
 					<div>
-						AQUI --- {{cadastro.nome}}
+						Ola {{cadastro.nome}}
 					</div>
 					<div>
 						O seu cadastro foi realizado com sucesso!
 					</div>
 					<div>
-						Enviamos para o {{cadastro.emal}} um link de confirmação, solicitamos que verifique sua caixa de entrada e complete o seu cadastro. 
+						Enviamos para o <b>{{cadastro.email}}</b> um link de confirmação, solicitamos que verifique sua caixa de entrada e complete o seu cadastro. 
+					</div>
+					<!-- -- >
+					<div>
+						<b>Importante</b> 
 					</div>
 					<div>
-						Importante 
+						Eventualmente, alguns servidores de email arquivam as novas mensagem como Spam por favor caso não encontre a mensagem na <b>caixa de entrada</b> procurem entre os Spam. 
 					</div>
-					<div>
-						eventualmente, alguns servidores de email arquivam as novas mensagem como Spam por favor caso não encontre a mensagem na caixa de entrada procurem entre os Spam. 
 					</div>
-					<div>
+					<!-- -->
+					<div class ="CloseModal">
 					<button class="button button-full button-energized-900 ink" ng-click = "closeModal()">Close Modal</button>
 					</div>
 				</ion-content>

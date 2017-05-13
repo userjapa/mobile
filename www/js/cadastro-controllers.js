@@ -1,6 +1,6 @@
 'use strict';
 angular.module('starter')
-.controller('CadastroCtrl', function($scope, $timeout, $stateParams, ionicMaterialInk, $ionicModal) {
+.controller('CadastroCtrl', function($scope, $timeout, $stateParams, ionicMaterialInk, $ionicModal, $location) {
     
 	console.log("CadastroCtrl");
 	
@@ -21,16 +21,15 @@ angular.module('starter')
 	/* Cadastro*/
 	
 	
-	console.log($scope.$id);
+	console.log($scope.cadastro);
 	
 	
 	/* Modal */
-	$ionicModal.fromTemplateUrl('my-modal.html', {
+	$ionicModal.fromTemplateUrl('cadastro-modal.html', {
 		scope: $scope,
 		animation: 'slide-in-up'	
 	}).then(function(modal) {
-		console.log($scope.$id);
-    	$scope.modal = modal;
+		$scope.modal = modal;
 	});
 	
 	$scope.openModal = function() {
@@ -39,6 +38,8 @@ angular.module('starter')
 	
 	$scope.closeModal = function() {
 		$scope.modal.hide();
+		$location.url("/");
+		
 	};
 	
 	//Cleanup the modal when we're done with it!

@@ -1,8 +1,7 @@
 'use strict';
 angular.module('starter')
 .controller('IntroCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk) {
-    /**/
-	console.log("IntroController");
+    console.log("IntroController");
 	// Set Header
     $scope.$parent.showHeader();
     $scope.$parent.clearFabs();

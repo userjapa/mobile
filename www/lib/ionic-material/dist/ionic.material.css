@@ -9,43 +9,49 @@
   padding: 30px 0 0; }
 
 .item-md-label .input-label {
-  position: absolute;
-  padding: 5px 0 0;
-  z-index: 2;
-  -webkit-transform: translate3d(0, -30px, 0) scale(1);
-  transform: translate3d(0, -30px, 0) scale(1);
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  color: #fff;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  -webkit-transform-origin: 0;
-  -ms-transform-origin: 0;
-  transform-origin: 0; }
+	position: absolute;
+	padding: 5px 0 0;
+	z-index: 2;
+	-webkit-transform: translate3d(0, -30px, 0) scale(1);
+	transform: translate3d(0, -30px, 0) scale(1);
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+	color: #FFF;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+	-webkit-transform-origin: 0;
+	-ms-transform-origin: 0;
+	transform-origin: 0;
+	font-weight:100;
+}
 
 .item-md-label input {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
-  color: #fff;
-  letter-spacing: 0.25rem;
-  padding: 20px 10px;
-  position: relative;
-  z-index: 1; }
+	background-color: rgba(0, 0, 0, 0.6);
+	bottom: 0;
+	color: #fff;
+	letter-spacing: 0.25rem;
+	padding: 20px 10px;
+	position: relative;
+	z-index: 1;
+	font-weight:100;
+}
 
 .item-md-label .highlight {
-  position: absolute;
-  bottom: 0;
-  height: 2px;
-  left: 0;
-  width: 100%;
-  -webkit-transform: translate3d(-100%, 0, 0);
-  transform: translate3d(-100%, 0, 0);
-  -webkit-transition: all 0.15s ease;
-  transition: all 0.15s ease;
-  z-index: 1; }
+	position: absolute;
+	bottom: 0;
+	height: 2px;
+	left: 0;
+	width: 100%;
+	-webkit-transform: translate3d(-100%, 0, 0);
+	transform: translate3d(-100%, 0, 0);
+	-webkit-transition: all 0.15s ease;
+	transition: all 0.15s ease;
+	z-index: 1; 
+}
 
 .item-md-label .highlight-light {
-  background: #fff; }
+  background: #fff; 
+}
 
 .item-md-label .highlight-stable {
   background: #f8f8f8; }
@@ -76,9 +82,9 @@
   padding: 0 10px; }
 
 .item-md-label input:focus ~ .input-label, .item-md-label input.used ~ .input-label {
-  font-weight: bold;
-  opacity: 0.7;
-  filter: alpha(opacity=70);
+  font-weight: 100;
+  opacity: 1.0;
+  filter: alpha(opacity=100);
   padding: 0;
   text-transform: uppercase;
   -webkit-transform: translate3d(0, -60px, 0) scale(0.9);
@@ -92,7 +98,8 @@
 ==================================*/
 .expanded .bar.bar-header,
 .bar.bar-header.expanded {
-  height: 75px; }
+	height: 75px; 
+}
 
 .expanded.bar.bar-header .title,
 .bar.bar-header.expanded .title {
@@ -1512,8 +1519,8 @@
   -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
   transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1); }
 
-/* Uncomment if you want images to fade in after the card
-
+/* Uncomment if you want images to fade in after the card */
+/**/
   .animate-ripple .in .item-bg-image img:last-child,
   .animate-ripple .in .item-bg-image img:last-child { 
     opacity: 0;
@@ -1554,7 +1561,7 @@
 .animate-ripple .in {
     opacity: 0.6;
 }
-*/
+/**/
 .animate-ripple .in, .animate-ripple.done, .animate-ripple .in, .animate-ripple.done {
   -ms-transform: scale3d(1, 1, 1);
   -webkit-transform: scale3d(1, 1, 1);

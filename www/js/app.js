@@ -60,7 +60,6 @@ angular
 			}
 		})
 		
-		
 		.state('app.intro', {
 			url: '/intro',
 			views: {
@@ -81,7 +80,6 @@ angular
 				/**/
 			}
 		})
-		
 	
 		.state('app.home', {
 			url: '/home',
@@ -100,7 +98,6 @@ angular
 				}
 			}
 		})
-		
 	
 		.state('app.senha', {
 			url: '/senha',
@@ -119,7 +116,6 @@ angular
 				}
 			}
 		});
-		
 	
 		// if none of the above states are matched, use this as the fallback
 		$urlRouterProvider.otherwise('/app/login');
