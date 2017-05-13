@@ -1,0 +1,82 @@
+<ion-view view-title="Cadastro" align-title="left">
+    <ion-content style="background: url(img/senha-bg.jpg) center; background-size: cover;">
+        <div class="hero no-header flat">
+            <div class="content">
+                <div class="app-icon"></div>
+                <h1>{{FullSports}}</h1>
+            </div>
+        </div>
+        <div class="padding" style="padding:0px; margin:0px;">
+            <div>
+            	<h4 style="color:#FFF;">Cadastro</h4>
+            	<hr />
+            	<p style="color:#CCC; padding-bottom:0px;">&nbsp;</p>
+            </div>
+        </div>
+        <div class="list">
+            <ion-md-input  style=" padding-top:0px; border:0px solid #CCC;" placeholder="Nome de Usuario" ng-model='cadastro.nome' highlight-color="balanced" type="text"></ion-md-input>
+            <ion-md-input  style=" padding-top:0px; border:0px solid #CCC;" placeholder="Email" ng-model='cadastro.email' highlight-color="balanced" type="text"></ion-md-input>
+            <ion-md-input  style=" padding-top:0px; border:0px solid #CCC;" placeholder="Senha" ng-model='cadastro.senha' highlight-color="balanced" type="password"></ion-md-input>
+            <ion-md-input  style=" padding-top:0px; border:0px solid #CCC;" placeholder="Repetir a senha"  ng-model='cadastro.senharepetir' highlight-color="balanced" type="password"></ion-md-input>
+        </div>
+        <div class="cadastro-link">
+        AQUI --- {{cadastro.nome}}
+        </div>
+        <div class="cadastro-link">
+            <label class="checkbox wave">
+   <input type="checkbox">
+</label>
+            Li e concordo com os <a ui-sref="app.termos">Termos de uso</a> e <a ui-sref="app.politica">Pol&iacute;tica e Privacidade</a>.
+        </div>
+        <div class="padding">
+            <button  ui -s ref="app.login" ng-click="openModal()" class="button button-full button-energized-900 ink">Cadastrar</button>
+        </div>
+        <div class="button-bar social-login">
+            <!---- >
+            <button class="button button-small button-border icon-left ion-social-google button-assertive-900">Google+</button>
+            <button class="button button-small button-border icon-left ion-social-twitter button-calm-900">Twitter</button>
+            <button class="button button-small button-border icon-left ion-social-facebook button-positive-900">Facebook</button>
+            <!---->
+        </div>
+        
+        
+		<script id="my-modal.html" type="text/ng-template">
+			<ion-modal-view>
+				<ion-header-bar class="ion-header-bar">
+					<h4>Confirmação de cadastro</h4>
+				</ion-header-bar>
+				<ion-content class="ion-modal-view">
+					<div>
+						AQUI --- {{cadastro.nome}}
+					</div>
+					<div>
+						O seu cadastro foi realizado com sucesso!
+					</div>
+					<div>
+						Enviamos para o {{cadastro.emal}} um link de confirmação, solicitamos que verifique sua caixa de entrada e complete o seu cadastro. 
+					</div>
+					<div>
+						Importante 
+					</div>
+					<div>
+						eventualmente, alguns servidores de email arquivam as novas mensagem como Spam por favor caso não encontre a mensagem na caixa de entrada procurem entre os Spam. 
+					</div>
+					<div>
+					<button class="button button-full button-energized-900 ink" ng-click = "closeModal()">Close Modal</button>
+					</div>
+				</ion-content>
+			</ion-modal-view>
+        </script>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </ion-content>
+</ion-view>

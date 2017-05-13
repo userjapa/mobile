@@ -1,0 +1,43 @@
+<ion-view view-title="Home">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="hero slide-up" style="background-image: url('img/profile-bg.jpg');">
+            <div class="content">
+                <div class="avatar" style="background-image: url('img/letters/j.jpg');"></div>
+                <h3><a class="light">Juca Bala</a></h3>
+                <h4>John Doe</h4>
+            </div>
+        </div>
+        <div class="tabs tabs-dark tabs-icon-top static">
+            <a ui-sref="app.salas" class="tab-item">
+                <i class="icon ion-chatboxes"></i> Salas
+            </a>
+            <a ui-sref="app.esports" class="tab-item">
+                <i class="icon ion-ios-tennisball"></i> Esportes
+            </a>
+            <a ui-sref="app.convites" class="tab-item">
+                <i class="icon ion-email"></i> Convites
+            </a>
+        </div>
+        <h4 class="content padding double-padding-x">Salas</h4>
+        <div class="list animate-fade-slide-in-right">
+            <a ui-sref="app.salas" class="item item-avatar item-icon-right">
+                <img src="img/sports/futebol.jpg">
+                <h2>Campe&otilde;es de Quarta</h2>
+                <p>Futebol de Campo</p>
+                <i class="icon ion-android-open muted"></i>
+            </a>
+            <a ui-sref="app.salas" class="item item-avatar item-icon-right">
+                <img src="img/sports/basquete.jpg">
+                <h2>Demolidores</h2>
+                <p>Basquete</p>
+                <i class="icon ion-android-open muted"></i>
+            </a>
+            <a ui-sref="app.salas" class="item item-avatar item-icon-right">
+                <img src="img/sports/volei.jpg">
+                <h2>BreakOut</h2>
+                <p>V&ocirc;lei de Quadra</p>
+                <i class="icon ion-android-open muted"></i>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

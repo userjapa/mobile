@@ -1,0 +1,19 @@
+.cadastro-link{
+	padding:0px 10px 0px 20px;
+	color:#CCC;
+}
+.cadastro-link A{
+	color:#FFF;
+}
+.ion-modal-view{
+	background-color:#00F;
+	height:100px !important	;
+
+}
+.ion-header-bar{
+	padding:5px 10px;
+	background-color:#F90;
+}
+.ion-header-bar H4{
+	color:#FFF;
+}
