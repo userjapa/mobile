@@ -1,4 +1,5 @@
 .ion-modal-view{
+	/** /
 	width: 90%; 
     height: auto !important; 
     min-height: 0; 
@@ -7,6 +8,7 @@
     right: 5%; 
     bottom: 5%;
     border:0px solid #F90;
+	/**/
 }
 .ion-modal-view .title{
 	margin-left:-20px;
