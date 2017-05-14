@@ -30,7 +30,7 @@ angular.module('starter')
 	
 	
 	/* Modal */
-	$ionicModal.fromTemplateUrl('senha-modal.html', {
+	$ionicModal.fromTemplateUrl('templates/senha-modal.html', {
 		scope: $scope,
 		animation: 'slide-in-up'	
 	}).then(function(modal) {

@@ -1,0 +1,56 @@
+.ion-modal-view{
+	width: 90%; 
+    height: auto !important; 
+    min-height: 0; 
+    top: 5%; 
+    left: 5%; 
+    right: 5%; 
+    bottom: 5%;
+    border:0px solid #F90;
+}
+.ion-modal-view .title{
+	margin-left:-20px;
+}
+.ion-modal-view .button{
+	margin-top :-5px;
+	margin-right:-5px;
+	padding-top:0px;
+	border:0px solid #00F;
+	font-size:10px;
+}
+.ion-modal-content{
+	width: 100%;
+	height: 100%;
+	border: 0px solid #c30;
+	background: #fff;
+	position: relative;
+	display:table;
+	
+}
+.ion-modal-content .quadro {
+	 position: absolute; 
+	 top: 50% auto; 
+	 display: table-cell; 
+	 vertical-align: middle;
+}
+.ion-modal-content .quadro .texto {
+	 display:block; 
+	 position: relative; 
+	 top: -50%;
+}
+.ion-modal-content .quadro .texto P {
+	 color:#666;
+	 font-size:18px;
+	 text-indent:30px;
+}
+.ion-modal-content .quadro .texto P .destaque {
+	 color:#000;
+	 font-size:18px;
+	 text-align:center;
+}
+.ion-modal-content .quadro .texto P.icon {
+	 color:#000;
+	 font-size:50px;
+	 color:#F60;
+	 text-align:center;
+}

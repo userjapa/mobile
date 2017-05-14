@@ -1,6 +1,6 @@
 'use strict';
 angular.module('starter')
-.controller('CadastroCtrl', function($scope, $timeout, $stateParams, ionicMaterialInk, $ionicModal, $location) {
+.controller('CadastroCtrl', function($scope, $timeout, $stateParams, ionicMaterialInk, $ionicModal, $location, cadastroFactory) {
     
 	console.log("CadastroCtrl");
 	
@@ -15,9 +15,23 @@ angular.module('starter')
 	$scope.cadastro = {
 		nome		:'',
 		email		:'',
-		senha		:'',
-		senharepetir:''
+		termo		:''
 	};
+	
+	$scope.sucesso = false;
+	
+	$scope.validaCadastro = function(objCadastro){
+		console.log(objCadastro);
+		$scope.sucesso =cadastroFactory.validaCadastro(objCadastro);
+		if($scope.sucesso){
+			$scope.openModal();
+			console.log("Sucesso");
+		}else{
+			console.log("Erro");
+		}
+	}
+	
+	
 	/* Cadastro*/
 	
 	
