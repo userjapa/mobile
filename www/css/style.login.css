@@ -1,0 +1,13 @@
+/* Login */
+.login-link{
+	text-align:center;
+	color:#000;
+	text-decoration:none;
+	font-size:16px;
+	padding:10px 0px;
+}
+.login-link A{
+	color:#008;
+	text-decoration:none;
+	font-size:18px;
+}

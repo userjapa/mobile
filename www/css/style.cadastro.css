@@ -6,14 +6,34 @@
 	color:#FFF;
 }
 .ion-modal-view{
-	background-color:#00F;
-	height:100px !important	;
-
+    width: 90%; 
+    height: auto; 
+    min-height: 0; 
+    top: 20%; 
+    left: 5%; 
+    right: 5%; 
+    bottom: 30%;
+    border-radius:5px;
+    border:0px solid gold;
 }
+.ion-modal-view .CloseModal
+{
+	position:absolute;
+	bottom:0;
+	width:90%;
+}
+
 .ion-header-bar{
 	padding:5px 10px;
 	background-color:#F90;
 }
 .ion-header-bar H4{
 	color:#FFF;
+}
+.ConteudoModal {
+	font-size:18px;
+	color:#000;
+	padding:20px;
+	text-indent:20px;
+	line-height:30px;
 }
