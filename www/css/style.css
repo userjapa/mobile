@@ -5,7 +5,6 @@ h1 {
     font-size: 42px;
 }
 
-
 /* Utilities */
 .title-bordered {
     border-top: solid 2px #bbb;
@@ -75,4 +74,29 @@ p {
 }
 .list{
 	margin-right:25px;
+}
+.msgError{
+	color:#FFF; 
+	padding-top:15px; 
+	height:14px; 
+	font-size:18px; 
+	letter-spacing:0.25rem; 
+	font-weight:100; 
+	text-align:center;
+	text-shadow: 2px 2px #000000;
+}
+
+/*button-footer*/
+
+.button-corner-right{
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	width:100px;
+	height:100px;
+	background:url(../img/background/corner-right60.png);
+	background-color:transparent;
+	background-repeat:no-repeat;
+	border:0px solid #F00;
+	padding:50px 0px 0px 50px;
 }
