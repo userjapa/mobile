@@ -85,5 +85,27 @@ angular.module('starter.controllers', [])
         if (fabs.length && fabs.length > 1) {
             fabs[0].remove();
         }
-    };
-});
+    }
+
+})
+
+.controller('RoomCtrl', function($scope, $stateParams, $location, RoomService) {
+
+        $scope.view = 'ROOM';
+
+        $scope.sports = RoomService.sports;
+        $scope.rooms = RoomService.rooms;
+
+        $scope.user = $stateParams.user;
+        $scope.roomid = $stateParams.room;
+
+        $scope.room = {status : 'Open'};
+
+        $scope.op = "";
+
+        $scope.create = function() {
+            RoomService.rooms.push($scope.room);
+            $location.path('/app/'+$scope.user+'/rooms/'+$scope.room.id);
+            $scope.room = {status : 'Open'};
+        }
+    })

@@ -1,7 +1,7 @@
 // Ionic Starter App
 angular
 	//modulo
-	.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'ionMdInput'])
+	.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'ionMdInput', 'services'])
 	//run
 	.run(function($ionicPlatform) {
 		$ionicPlatform.ready(function() {
@@ -115,7 +115,37 @@ angular
 					}
 				}
 			}
-		});
+		})
+
+            .state('app.rooms', {
+                url : '/:user/rooms',
+                views : {
+                    'menuContent' : {
+                        templateUrl : 'templates/room/rooms.html',
+                        controller : 'RoomCtrl'
+                    }
+                }
+            })
+
+            .state('app.joinRoom', {
+                url : '/:user/rooms/:room',
+                views : {
+                    'menuContent' : {
+                        templateUrl : 'templates/room/room.html',
+                        controller : 'RoomCtrl'
+                    }
+                }
+            })
+
+            .state('app.createRoom', {
+                url : '/:user/rooms/create',
+                views : {
+                    'menuContent' : {
+                        templateUrl : 'templates/room/createRoom.html',
+                        controller : 'RoomCtrl'
+                    }
+                }
+            })
 	
 		// if none of the above states are matched, use this as the fallback
 		$urlRouterProvider.otherwise('/app/login');

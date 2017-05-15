@@ -1,0 +1,20 @@
+<ion-view view-title="Rooms" align-title="center">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <h1>{{view}}</h1>
+        User: {{user}}
+        <p><a ui-sref="app.createRoom({'user' : 2323})">Create Room</a></p>
+        <select ng-model="op">
+            <option value="FUTEBOL">FUTEBOL</option>
+            <option value="BASQUETE">BASQUETE</option>
+            <option value="VOLEI">VOLEI</option>
+            <option value="SINUCA">SINUCA</option>
+        </select>
+        <div ng-repeat="x in rooms | filter : op" style="border-bottom: 1px solid black;">
+            {{x.id}}<p/>
+            {{x.sport}}<p/>
+            {{x.players}}<p/>
+            {{x.status}}<p/>
+            <button ng-disabled="x.private" ui-sref="app.joinRoom({'user' : 2323, 'room' : {{x.id}}})">Join</button>
+        </div>
+    </ion-content>
+</ion-view>
