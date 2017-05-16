@@ -1,0 +1,74 @@
+<ion-view view-title="Config">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="hero slide-up" style="background-image: url('img/intro-bg.jpg');">
+            <div class="content">
+                <div class="avatar" style="background-image: url('img/letters/a.jpg');"></div>
+                <h3><a class="light">{{config.apelido}}</a></h3>
+                <h4>{{config.nome}}</h4>
+            </div>
+        </div>
+        <div class="tabs tabs-dark tabs-icon-top static">
+            <a ui-sref="app.salas" class="tab-item">
+                <i class="icon ion-chatboxes"></i> Salas
+            </a>
+            <a ui-sref="app.esports" class="tab-item">
+                <i class="icon ion-ios-tennisball"></i> Em Jogo
+            </a>
+            <a ui-sref="app.convites" class="tab-item">
+                <i class="icon ion-email"></i> Convites
+            </a>
+        </div>
+        <div class="animate-fade-slide-in-right" style="padding:0px;">
+            <div class="item configPanel-item">
+            	
+                
+                
+                
+                <div class="row">
+                <form class="col s12">
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                      <label for="first_name">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <input id="last_name" type="text" class="validate">
+                      <label for="last_name">Last Name</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+                      <label for="disabled">Disabled</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="password" type="password" class="validate">
+                      <label for="password">Password</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="email" type="email" class="validate">
+                      <label for="email">Email</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s12">
+                      This is an inline input field:
+                      <div class="input-field inline">
+                        <input id="email" type="email" class="validate">
+                        <label for="email" data-error="wrong" data-success="right">Email</label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+                
+                
+                
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

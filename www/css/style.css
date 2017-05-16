@@ -94,9 +94,9 @@ p {
 	bottom:0px;
 	width:100px;
 	height:100px;
-	background:url(../img/background/corner-right60.png);
+	background:url(../img/background/round-corner-right60.png);
 	background-color:transparent;
 	background-repeat:no-repeat;
 	border:0px solid #F00;
-	padding:50px 0px 0px 50px;
+	padding:55px 0px 0px 55px;
 }
