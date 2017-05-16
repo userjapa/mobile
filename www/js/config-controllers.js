@@ -9,18 +9,6 @@ angular.module('starter')
     $scope.$parent.setExpanded(false);
     $scope.$parent.setHeaderFab(false);
 	
-	//config
-	$scope.config = {
-		nome       : configFactory.nome,
-    	apelido    : configFactory.apelido,
-		nascimento : configFactory.nascimento,
-		cep        : configFactory.cep,
-		sexo       : configFactory.sexo,
-		perfil     : configFactory.perfil,
-		esportes   : []
-	}
-    
-	
 	// Set Motion
     $timeout(function() {
         ionicMaterialMotion.slideUp({
