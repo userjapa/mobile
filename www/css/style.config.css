@@ -1,0 +1,73 @@
+.btn-block {
+   width: 100%;
+}
+.configSports{
+	position:relative;
+	border:1px solid #009;
+	width:100%;
+	height:120px;
+	background-color:#FAFAFA;
+}
+.configSports-checkbox[type="checkbox"] + label:before{
+    border: 2px solid #FFFFFF;
+    background: transparent;
+	position:absolute;
+	top:-30px;
+	left:-30px;
+}
+.configSports-checkbox[type="checkbox"]:checked + label:before{
+    border: 2px solid transparent;
+    border-bottom: 2px solid #009688;
+    border-right: 2px solid #009688;
+    background: transparent;
+}
+.configSports-checkbox.filled-in[type="checkbox"] + label:after{
+    border: 2px solid #009688;
+    background: transparent;
+}
+.configSports-checkbox.filled-in[type="checkbox"]:checked + label:after{
+    background: #009688;
+}
+.configSports-checkbox.filled-in[type="checkbox"]:checked + label:before{
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.configSports-futeboldecampo{
+	background:url(../img/icons/futeboldecampo.png) top center no-repeat;
+	background-size:cover;
+}
+.configSports-futeboldesalao{
+	background:url(../img/icons/futeboldesalao.png) top center no-repeat;
+	background-size:cover;
+}
+.configSports-futebolsociety{
+	background:url(../img/icons/futebolsociety.png) top center no-repeat;
+	background-size:cover;
+}
+.configSports-futeboldesete{
+	background:url(../img/icons/futebolde7.png) top center no-repeat;
+	background-size:cover;
+}
+.configSports-voleidepraia{
+	background:url(../img/icons/voleidepraia.png) top center no-repeat;
+	background-size:cover;
+}
+.configSports-voleidequadra{
+	background:url(../img/icons/voleidequadra.png) top center no-repeat;
+	background-size:cover;
+}
+.configSports-voleisentado{
+	background:url(../img/icons/voleisentado.png) top center no-repeat;
+	background-size:cover;
+}
+.configSports-basquete{
+	background:url(../img/icons/basquete.png) top center no-repeat;
+	background-size:cover;
+}
+.configSports-basqueteemcadeiraderodas{
+	background:url(../img/icons/basqueteemcadeiraderodas.png) top center no-repeat;
+	background-size:cover;
+}

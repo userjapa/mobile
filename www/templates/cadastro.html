@@ -6,59 +6,54 @@
                 <h1>{{FullSports}}</h1>
             </div>
         </div>
-        <div class="padding" style="padding:0px; margin:0px;">
-            <div>
-            	<h4 style="color:#FFF;">Cadastro</h4>
-            	<hr />
-            	<p style="color:#CCC; padding-bottom:0px;">&nbsp;</p>
-            </div>
-        </div>
-        <div class="list">
-            <ion-md-input  style=" padding-top:0px; border:0px solid #CCC;" placeholder="Nome de Usuario" ng-model='cadastro.nome' highlight-color="balanced" type="text"></ion-md-input>
-            <ion-md-input  style=" padding-top:0px; border:0px solid #CCC;" placeholder="Email" ng-model='cadastro.email' highlight-color="balanced" type="text"></ion-md-input>
-        </div>
-        <div class="cadastro-link">
-            <div style="float:left;">
-            	<label class="checkbox">
-   				<input type="checkbox" ng-model="cadastro.termo">
-                </label>
-            </div>
-            <div style="margin-left:40px; font-size:16px; letter-spacing:0.10rem;">
-            	Li e concordo com os <a ui-sref="app.termo">Termos de uso</a> e <a ui-sref="app.politica">Pol&iacute;tica e Privacidade</a>.
-            </div>
-        </div>
-        <div class="padding">
-            <button ng-click="validaCadastro(cadastro)" class="button button-full button-energized-900 ink">Cadastrar</button>
-        </div>
         
-		<script id="cadastro-modal.html" type="text/ng-template">
-			<ion-modal-view class="ion-modal-view">
-				<ion-header-bar class="bar bar-header button-energized-900">
-					<h1 class="title">Sucesso</h1>
-					<button class="button button-clear button-primary" ng-click="closeModal()"><i class="icon ion-close"></i></button>
-				</ion-header-bar>
-				<ion-content class="padding">
-					<div class="ion-modal-content">
-						<div class="quadro">
-							<div class="texto">
-								<p class="icon"><i class="icon ion-android-hand"></i></p>
-								<p><span class="destaque">{{cadastro.nome}}</span> quase pronto, enviamos uma senha de acesso para o e-mail:</p>
-								<p><span class="destaque">{{cadastro.email}}</span></p>
-								<p>Após realizar o login poderá finalizar seu cadastro.</p>
-							</div>
-						</div>
-					</div>
-					<!--button class="button button-full button-positive button-close-modal" ng-click="closeModal()">Fechar</button-->
-				</ion-content>
-				<ion-footer-bar class="bar bar-footer button-energized-900">
-				&nbsp;
-				</ion-footer-bar>
-			</ion-modal-view>
-        </script>
-        <!-- -->
-        <div class="button-footer">
-            <div class="button-corner-right"><a ui-sref="app.login" style="color:#FFF; font-size:36px;"><i class="icon ion-ios-undo"></i></a></div>
+        <div class="list animate-fade-slide-in-right" style="margin:5px 25px;">
+            <div class="item">
+                <div class='row' style="margin:0px; padding:20px 0 15px 0;background-color:#000; opacity:0.9">
+                    <div class='col s12' style="text-align:center;">
+                    <h1 style="font-size:24px">Cadastro</h1>
+                    </div>
+                </div>
+                
+                <div class="z-depth-1  row" style="background-image:url(../img/background/opacity60.png); padding: 0px 0px 0px 0px;;">
+                    <form class="col s12" name="formSenha" ng-submit="validaCadastro(cadastro)">
+                        <div class='row'>
+                            <div class='input-field col s12'>
+                                <input class='validate' type='text' name='nome' id='nome' ng-model="cadastro.nome" required="required" autocomplete="off" style="color:#EEE" />
+                                <label for='email'>Nome Completo</label>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='input-field col s12'>
+                                <input class='validate' type='email' name='email' id='email' ng-model="cadastro.email" required="required" autocomplete="off" style="color:#EEE" />
+                                <label for='email'>Email</label>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='input-field col s12' style="color:#FFF;">
+                            	<input type="checkbox" id="termo" ng-model="cadastro.termo" />
+      							<label for="termo"></label>Li e concordo com os <a ui-sref="app.termo">Termos de uso</a> e <br /><a ui-sref="app.politica">Pol&iacute;tica e Privacidade</a>.
+      						</div>
+                        </div>
+                        <div class='row'>
+                            <div class='col s12'>
+                            	<div cla ss="msgError" style="color:#FFF; text-align:center;">&nbsp;{{error}}</div>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <button ng-disabled="formSenha.$invalid" type='submit' name='btnSenha' class='col s12 btn btn-large waves-effect indigo'>Cadastrar</button>
+                        </div>
+                        <div class='row'>
+                            <div class="col s6">
+                                <a ui-sref="app.senha" style="color:#DDD;">Esqueci a senha</a>
+                            </div>
+                            <div class="col s6" style="text-align:right;">
+                                <a ui-sref="app.login" style="color:#DDD;">Voltar</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <!-- -->
     </ion-content>
 </ion-view>

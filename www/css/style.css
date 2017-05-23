@@ -100,3 +100,28 @@ p {
 	border:0px solid #F00;
 	padding:55px 0px 0px 55px;
 }
+
+/*Ionic PopUp*/
+.popup{
+	border:1px #CCC solid;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.popup-head{
+	border:0px #00F solid;
+	background-color:#009688;
+}
+
+.popup-title{
+	color:#FFF;
+}
+
+.popup-sub-title {
+	color:#EEE;
+}
+
+.popup-body
+
+.popup-buttons.row 
+
+.popup-buttons .button

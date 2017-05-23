@@ -10,9 +10,7 @@ angular.module('starter')
     $scope.$parent.setHeaderFab(false);
 	
 	//config
-	$scope.nome    = configFactory.nome;
-    $scope.apelido = configFactory.apelido;
-    
+	$scope.config = configFactory.userConta;
 	
 	// Set Motion
     $timeout(function() {
