@@ -1,0 +1,163 @@
+<ion-view view-title="Config">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="hero slide-up" style="background-image: url('img/intro-bg.jpg');">
+            <div class="content">
+                <div class="avatar" style="background-image: url('img/letters/a.jpg');"></div>
+                <h3><a class="light">{{config.apelido}}</a></h3>
+                <h4>{{config.nome}}</h4>
+            </div>
+        </div>
+        <div class="tabs tabs-dark tabs-icon-top static">
+            <a ui-sref="app.salas" class="tab-item">
+                <i class="icon ion-chatboxes"></i> Salas
+            </a>
+            <a ui-sref="app.esports" class="tab-item">
+                <i class="icon ion-ios-tennisball"></i> Em Jogo
+            </a>
+            <a ui-sref="app.convites" class="tab-item">
+                <i class="icon ion-email"></i> Convites
+            </a>
+        </div>
+        <div class="animate-fade-slide-in-right" style="padding:0px;">
+            <div class="item">
+            	<div class='row' style="margin:0px; padding:20px 0 15px 0;background-color:#000; opacity:0.9">
+                    <div class='col s12' style="text-align:center;">
+                    <h1 style="font-size:24px">Configurar Conta</h1>
+                    </div>
+                </div>
+                <div class="row">
+                	<form class="col s12" ng-submit="validaConfig(config)">
+                  		<div class='row'>
+                            <div class='input-field col s6'>
+                                <input class='validate' type='text' name='apelido' id='apelido' ng-model="config.apelido" autocomplete="off" />
+                                <label for='apelido'>Apelido</label>
+                            </div>
+                            <div class='input-field col s6'>
+                                <div class="file-field input-field">
+                                    <div class="btn">
+                                    	<span><i class="icon ion-email"></i></span>
+                                    	<input type="file">
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                    	<input class="file-path validate" type="text">
+	                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+              			<div class='row'>
+                            <div class='input-field col s12'>
+                                <input class='validate' type='text' name='nome' id='nome' ng-model="config.nome" required="required" autocomplete="off" />
+                                <label for='nome'>Nome Completo</label>
+                            </div>
+                        </div>
+              			<div class='row'>
+                            <div class='input-field col s12'>
+                                <input type="date" placeholder="dd/mm/aaaa" name="nascimento" class="datepicker" ng-model="config.nascimento">
+                                <label for='nome' style="top:-12px">Data de Nascimento</label>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='input-field col s12'>
+                                <input type="text" name="cep" ng-model="config.cep">
+                                <label for='cep'>C.E.P.:</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select>
+                                    <option value="M" ng-selected="config.sexo == 'M'">Masculino</option>
+                                    <option value="F" ng-selected="config.sexo == 'F'">Feminino</option>
+                                </select>
+                                <label>Sexo</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select>
+                                    <option value="Atleta" ng-selected="config.perfil == 'Atleta'">Atleta</option>
+                                </select>
+                                <label>Perfil</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s4">
+                                <div class="configSports configSports-futeboldecampo" ng-click="checkEsporte('esporte_0')">
+                                	<input type="checkbox" class="configSports-checkbox" id="esporte_0" ng-model="config.esportes[0].status" />
+                                    <label for="esporte_0"><!--{{config.esportes[0].status}}--></label>
+                            	</div>
+                            </div>
+                            <div class="input-field col s4">
+                               	<div class="configSports configSports-futeboldesalao" ng-click="checkEsporte('esporte_1')">
+                               		<input type="checkbox" class="configSports-checkbox" id="esporte_1" ng-model="config.esportes[1].status" />
+                                	<label for="esporte_1"><!--{{config.esportes[1].status}}--></label>
+                            	</div>
+                            </div>
+                            <div class="input-field col s4">
+                                <div class="configSports configSports-futebolsociety" ng-click="checkEsporte('esporte_2')">
+                               		<input type="checkbox" class="configSports-checkbox" id="esporte_2" ng-model="config.esportes[2].status" />
+                                	<label for="esporte_2"><!--{{config.esportes[2].status}}--></label>
+                        	    </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s4">
+                                <div class="configSports configSports-futeboldesete" ng-click="checkEsporte('esporte_3')">
+                                    <input type="checkbox" class="configSports-checkbox" id="esporte_3" ng-model="config.esportes[3].status" />
+                                	<label for="esporte_3"><!--{{config.esportes[3].status}}--></label>
+                            	</div>
+                            </div>
+                            <div class="input-field col s4">
+                                <div class="configSports configSports-voleidepraia" ng-click="checkEsporte('esporte_4')">
+                            	    <input type="checkbox" class="configSports-checkbox" id="esporte_4" ng-model="config.esportes[4].status" />
+                                    <label for="esporte_4"><!--{{config.esportes[4].status}}--></label>
+                            	</div>
+                            </div>
+                            <div class="input-field col s4">
+                                <div class="configSports configSports-voleidequadra" ng-click="checkEsporte('esporte_5')">
+                                    <input type="checkbox" class="configSports-checkbox" id="esporte_5" ng-model="config.esportes[5].status" />
+                                    <label for="esporte_5"><!--{{config.esportes[5].status}}--></label>
+                        	    </div>
+                            </div>
+                        </div>
+              		   	<div class="row" style="margin-bottom:5px;">
+                        	<div class="input-field col s4">
+                                <div class="configSports configSports-voleisentado" ng-click="checkEsporte('esporte_6')">
+                                    <input type="checkbox" class="configSports-checkbox" id="esporte_6" ng-model="config.esportes[6].status" />
+                                    <label for="esporte_6"><!--{{config.esportes[6].status}}--></label>
+                            	</div>
+                            </div>
+                            <div class="input-field col s4">
+                                <div class="configSports configSports-basquete" ng-click="checkEsporte('esporte_7')">
+                            	    <input type="checkbox" class="configSports-checkbox" id="esporte_7" ng-model="config.esportes[7].status" />
+                               		<label for="esporte_7"><!--{{config.esportes[7].status}}--></label>
+                            	</div>
+                            </div>
+                            <div class="input-field col s4">
+                                <div class="configSports configSports-basqueteemcadeiraderodas" ng-click="checkEsporte('esporte_8')">
+                            	    <input type="checkbox" class="configSports-checkbox" id="esporte_8" ng-model="config.esportes[8].status" />
+                                	<label for="esporte_8"><!--{{config.esportes[8].status}}--></label>
+                        	    </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin:0px;">
+                            <div class="input-field col s12">
+                                <input type="checkbox" id="notificacoes" ng-model="config.notificacoes" />
+                               	<label for="notificacoes">N&atilde;o receber notifica&ccedil;&otilde;es</label>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:30px;">
+                            <div class="input-field col s12">
+                                <input type="checkbox" id="localizacao" ng-model="config.localizacao" />
+                               	<label for="localizacao">N&atilde;o mostrar a minha localiza&ccedil;&atilde;o</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                        	<button type="submit" class="btn btn-large btn-block waves-effect waves-light">Atualizar cadastro</button>
+                        </div>
+              		</form>
+				</div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

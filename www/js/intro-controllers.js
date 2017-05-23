@@ -1,6 +1,6 @@
 'use strict';
 angular.module('starter')
-.controller('IntroCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk) {
+.controller('IntroCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk, configFactory) {
     console.log("IntroController");
 	// Set Header
     $scope.$parent.showHeader();
@@ -8,8 +8,11 @@ angular.module('starter')
     $scope.isExpanded = false;
     $scope.$parent.setExpanded(false);
     $scope.$parent.setHeaderFab(false);
-
-    // Set Motion
+	
+	//config
+	$scope.config = configFactory.userConta;
+	
+	// Set Motion
     $timeout(function() {
         ionicMaterialMotion.slideUp({
             selector: '.slide-up'

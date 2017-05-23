@@ -1,0 +1,82 @@
+<ion-view view-title="Config">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="hero slide-up" style="background-image: url('img/intro-bg.jpg');">
+            <div class="content">
+                <div class="avatar" style="background-image: url('img/letters/a.jpg');"></div>
+                <h3><a class="light">{{config.apelido}}</a></h3>
+                <h4>{{config.nome}}</h4>
+            </div>
+        </div>
+        <div class="tabs tabs-dark tabs-icon-top static">
+            <a ui-sref="app.salas" class="tab-item">
+                <i class="icon ion-chatboxes"></i> Salas
+            </a>
+            <a ui-sref="app.esports" class="tab-item">
+                <i class="icon ion-ios-tennisball"></i> Em Jogo
+            </a>
+            <a ui-sref="app.convites" class="tab-item">
+                <i class="icon ion-email"></i> Convites
+            </a>
+        </div>
+        <div class="animate-fade-slide-in-right" style="padding:0px;">
+            <div class="item configPanel-item">
+            	<div class="list">
+	                &nbsp;
+                </div>
+                <div class="list" style="border:0px solid #333;">
+                    <div class="row" style="border:0px solid #333;">
+                        <div class="col-80" style="border:0px solid #333; padding-left:5px;">
+                            <label>Apelido:</label>
+                            <input type="text" placeholder="Apelido" ng-model="config.apelido" ng-class="classApelido" ng-focus="mudaCor('apelido')" ng-blur="verificaConteudo('apelido')" style="width:95%;" />
+                        </div>
+                        <div class="col-20" style="border:0px solid #333; text-align:right;">
+                        	<a ui-sref="app.config" style="font-size:48px;">
+                            <i class="icon ion-ios-camera"></i>
+                        	</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="row" style="border:0px solid #333;">
+                        <div class="col" style="border:0px solid #333;">
+                        	<label>*&nbsp;Nome:</label>
+                    		<input type="text" ng-model="config.nome" ng-class="classNome" ng-focus="mudaCor('nome')" ng-blur="verificaConteudo('nome')" />
+                		</div>
+                	</div>        
+                </div>
+                <div class="list">
+                    <div class="row" style="border:0px solid #333;">
+                        <div class="col" style="border:0px solid #333;">
+                    		<label>*&nbsp;Data de Nascimento:</label>
+                    		<input type="text" ng-model="config.nascimento" ng-class="classNascimento" ng-focus="mudaCor('nascimento')" ng-blur="verificaConteudo('nascimento')"  />
+                        </div>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="row" style="border:0px solid #333;">
+                        <div class="col" style="border:0px solid #333;">
+                    		<label>*&nbsp;C.E.P.:</label>
+                    		<input type="text" ng-model="config.cep" ng-class="classCep" ng-focus="mudaCor('cep')" ng-blur="verificaConteudo('cep')" />
+                		</div>
+                    </div>    
+                </div>
+                <div class="list">
+                    <div class="row" style="border:0px solid #333;">
+                        <div class="col" style="border:0px solid #333;">
+                    		<label>*&nbsp;Sexo:</label>
+                    		<input type="text" ng-model="config.sexo" ng-class="classSexo" ng-focus="mudaCor('sexo')" ng-blur="verificaConteudo('sexo')" />
+                		</div>
+                    </div>   
+                </div>
+                <div class="list">
+                    <div class="row" style="border:0px solid #333;">
+                        <div class="col" style="border:0px solid #333;">
+                    		<label>*&nbsp;Perfil:</label>
+                    		<input type="text" ng-model="config.perfil" ng-class="classPerfil" ng-focus="mudaCor('perfil')" ng-blur="verificaConteudo('perfil')" />
+                		</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

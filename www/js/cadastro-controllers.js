@@ -1,6 +1,6 @@
 'use strict';
 angular.module('starter')
-.controller('CadastroCtrl', function($scope, $timeout, $stateParams, ionicMaterialInk, $ionicModal, $location, cadastroFactory) {
+.controller('CadastroCtrl', function($scope, $timeout, $stateParams, ionicMaterialMotion, ionicMaterialInk, $location, $ionicModal, cadastroFactory, $ionicPopup) {
     
 	console.log("CadastroCtrl");
 	
@@ -18,58 +18,54 @@ angular.module('starter')
 		termo		:''
 	};
 	
+	//Vars	
 	$scope.sucesso = false;
+	$scope.error = "";
 	
 	$scope.validaCadastro = function(objCadastro){
 		console.log(objCadastro);
-		$scope.sucesso =cadastroFactory.validaCadastro(objCadastro);
-		if($scope.sucesso){
-			$scope.openModal();
-			console.log("Sucesso");
-		}else{
-			console.log("Erro");
-		}
+			$scope.sucesso = cadastroFactory.validaCadastro(objCadastro);
+			if($scope.sucesso){
+				//$location.url("app/login");
+				$scope.showAlert();
+				console.log("Sucesso");
+			}else{
+				console.log("Erro");
+				$scope.error = "Você precisa aceitar os Termos de uso e Politica e Privacidade";
+			}
+		
 	}
 	
+	//---------- PopUp  ----------
 	
-	/* Cadastro*/
+	$scope.showAlert = function() {
+		var alertPopup = $ionicPopup.alert({
+			title: 'Sucesso',
+			template: 'Senha enviada para o e-mail: ' + $scope.cadastro.email
+		});
 	
-	
-	console.log($scope.cadastro);
-	
-	
-	/* Modal */
-	$ionicModal.fromTemplateUrl('cadastro-modal.html', {
-		scope: $scope,
-		animation: 'slide-in-up'	
-	}).then(function(modal) {
-		$scope.modal = modal;
-	});
-	
-	$scope.openModal = function() {
-		$scope.modal.show();
+		alertPopup.then(function(res) {
+			$location.url("app/login");
+		});
 	};
+	//---------- /PopUp ----------
 	
-	$scope.closeModal = function() {
-		$scope.modal.hide();
-		$location.url("/");
-		
-	};
 	
-	//Cleanup the modal when we're done with it!
-	$scope.$on('$destroy', function() {
-		$scope.modal.remove();
-	});
-	
-	// Execute action on hide modal
-	$scope.$on('modal.hidden', function() {
-    	// Execute action
-   	});
-	
-	// Execute action on remove modal
-	$scope.$on('modal.removed', function() {
-    	// Execute action
-	});
-	/* Modal */
-	
+	//---------- Efeito ----------
+	// Set Motion
+    $timeout(function() {
+        ionicMaterialMotion.slideUp({
+            selector: '.slide-up'
+        });
+    }, 100);
+
+    $timeout(function() {
+        ionicMaterialMotion.fadeSlideInRight({
+            startVelocity: 3000
+        });
+    }, 700);
+
+    // Set Ink
+    ionicMaterialInk.displayEffect();
+	//---------- /Efeito ----------
 });

@@ -1,23 +1,28 @@
 'use strict';
 angular.module('starter')
-.controller('SenhaCtrl', function($scope, $timeout, $stateParams, ionicMaterialInk, $ionicModal, $location, senhaFactory) {
+.controller('SenhaCtrl', function($scope, $timeout, $stateParams, ionicMaterialMotion, ionicMaterialInk, $location, senhaFactory, $ionicPopup) {
     console.log("SenhaCtrl");
 	
-	/* email*/
-	$scope.senha = {email:""};
-	/* email*/
-	
+	/* Objeto senha*/
+	$scope.senha = {
+			email:""
+		};
 	console.log($scope.senha);
 	
+	//Vars	
+	$scope.sucesso = false;
 	$scope.error = "";
 	
-	$scope.validaLogin = function(){
-		
-		if(senhaFactory.validaSenha($scope.senha)){
-			
+	$scope.validaSenha = function(objSenha){
+		console.log(objSenha);
+		$scope.sucesso = senhaFactory.validaSenha(objSenha);
+		if($scope.sucesso){
 			//$location.url("app/login");
-			$scope.openModal();
+			$scope.showAlert();
+			//$scope.getDataOpenModal();
+			console.log("Sucesso");
 		}else{
+			console.log("Erro");
 			$scope.error = "Campo e-mail em branco.";
 		}
 	}
@@ -26,40 +31,35 @@ angular.module('starter')
         $scope.$parent.hideHeader();
     }, 0);
     
-	ionicMaterialInk.displayEffect();
+	//---------- PopUp ----------
+	$scope.showAlert = function() {
+		var alertPopup = $ionicPopup.alert({
+			title: 'Sucesso',
+			template: 'Senha enviada para o e-mail: ' + $scope.senha.email
+		});
 	
-	
-	/* Modal */
-	$ionicModal.fromTemplateUrl('templates/senha-modal.html', {
-		scope: $scope,
-		animation: 'slide-in-up'	
-	}).then(function(modal) {
-		$scope.modal = modal;
-	});
-	
-	$scope.openModal = function() {
-		$scope.modal.show();
+		alertPopup.then(function(res) {
+			$location.url("app/login");
+		});
 	};
+ 	//---------- /PopUp ----------
+ 
+	//---------- Efeito ----------
+	// Set Motion
+    $timeout(function() {
+        ionicMaterialMotion.slideUp({
+            selector: '.slide-up'
+        });
+    }, 100);
+
+    $timeout(function() {
+        ionicMaterialMotion.fadeSlideInRight({
+            startVelocity: 3000
+        });
+    }, 700);
+
+    // Set Ink
+    ionicMaterialInk.displayEffect();
+	//---------- /Efeito ----------
 	
-	$scope.closeModal = function() {
-		$scope.modal.hide();
-		$location.url("/");
-		
-	};
-	
-	//Cleanup the modal when we're done with it!
-	$scope.$on('$destroy', function() {
-		$scope.modal.remove();
-	});
-	
-	// Execute action on hide modal
-	$scope.$on('modal.hidden', function() {
-    	// Execute action
-   	});
-	
-	// Execute action on remove modal
-	$scope.$on('modal.removed', function() {
-    	// Execute action
-	});
-	/* Modal */
 })

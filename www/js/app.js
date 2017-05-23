@@ -15,6 +15,7 @@ angular
 				StatusBar.styleDefault();
 			}
 		});
+		
 	})
 	//config
 	.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
@@ -114,6 +115,67 @@ angular
 						}, 800);*/
 					}
 				}
+			}
+		})
+		
+		.state('app.config', {
+			url: '/config',
+			views: {
+				'menuContent': {
+					templateUrl: 'templates/config.html',
+					controller: 'ConfigCtrl'
+				}
+				/** /
+				,
+				'fabContent': {
+					template: '<button id="fab-profile" class="button button-fab button-fab-bottom-right button-energized-900"><i class="icon ion-plus"></i></button>',
+					controller: function ($timeout) {
+						$timeout(function () {
+							document.getElementById('fab-profile').classList.toggle('on');
+						}, 800);
+					}
+				}
+				/**/
+			}
+		})
+		.state('app.salas', {
+			url: '/salas',
+			views: {
+				'menuContent': {
+					templateUrl: 'templates/salas.html',
+					controller: 'SalasCtrl'
+				}
+				/** /
+				,
+				'fabContent': {
+					template: '<button id="fab-profile" class="button button-fab button-fab-bottom-right button-energized-900"><i class="icon ion-plus"></i></button>',
+					controller: function ($timeout) {
+						$timeout(function () {
+							document.getElementById('fab-profile').classList.toggle('on');
+						}, 800);
+					}
+				}
+				/**/
+			}
+		})
+		.state('app.sala', {
+			url: '/sala/:id',
+			views: {
+				'menuContent': {
+					templateUrl: 'templates/sala.html',
+					controller: 'SalaCtrl'
+				}
+				/** /
+				,
+				'fabContent': {
+					template: '<button id="fab-profile" class="button button-fab button-fab-bottom-right button-energized-900"><i class="icon ion-plus"></i></button>',
+					controller: function ($timeout) {
+						$timeout(function () {
+							document.getElementById('fab-profile').classList.toggle('on');
+						}, 800);
+					}
+				}
+				/**/
 			}
 		});
 	

@@ -7,31 +7,46 @@
             </div>
         </div>
         
-        <md-input-container>
-        <div class="list">
-            <ion-md-input ng-focus="focus()" ng-model="login.email" placeholder="Usuario" highlight-color="energized" type="text"></ion-md-input>
-            <ion-md-input ng-focus="focus()" ng-model="login.senha" placeholder="Senha"   highlight-color="energized" type="password"></ion-md-input>
-            <div class="msgError">{{error}}</div>
+        <div class="list animate-fade-slide-in-right" style="margin:5px 25px;">
+            <div class="item">
+                <div class='row' style="margin:0px; padding:20px 0 15px 0;background-color:#000; opacity:0.9">
+                    <div class='col s12' style="text-align:center;">
+                    <h1 style="font-size:24px">Login</h1>
+                    </div>
+                </div>
+                <div class="z-depth-1  row" style="background-image:url(../img/background/opacity60.png); padding: 0px 0px 0px 0px;;">
+                    <form class="col s12" method="post" name="formLogin" ng-submit="validaLogin()">
+                        <div class='row'>
+                            <div class='input-field col s12'>
+                                <input class='validate' type='email' name='email' id='email' ng-model="login.email" required="required" autocomplete="off" style="color:#EEE" />
+                                <label for='email'>Email</label>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='input-field col s12'>
+                                <input class='validate' type='password' name='password' id='password' ng-model="login.senha"  required="required" style="color:#EEE" />
+                                <label for='password'>Senha</label>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='col s12'>
+                            <div cla ss="msgError" style="color:#FFF; text-align:center;">&nbsp;{{error}}</div>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <button ng-disabled="formLogin.$invalid" type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Entrar</button>
+                        </div>
+                        <div class='row'>
+                            <div class="col s6">
+                                <a ui-sref="app.senha" style="color:#DDD;">Esqueci a senha</a>
+                            </div>
+                            <div class="col s6" style="text-align:right;">
+                                <a ui-sref="app.cadastro" style="color:#DDD;">Cadastre-se</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="padding">
-            <button ng-click="validaLogin()" ng-disabled="false" class="button button-full button-energized-900 ink">Entrar</button>
-        </div>
-        </md-input-container>
-        
-        <div class="login-link">
-            <a ui-sref="app.senha">Esqueci a senha.</a>
-        </div>
-        <div class="login-link">
-            N&atilde;o tem login? <a ui-sref="app.cadastro">Cadastre-se</a>.
-        </div>
-        <!-- Login com rede social-- >
-        <div class="button-bar social-login">
-        
-            <button class="button button-small button-border icon-left ion-social-google button-assertive-900">Google+</button>
-            <button class="button button-small button-border icon-left ion-social-twitter button-calm-900">Twitter</button>
-            <button class="button button-small button-border icon-left ion-social-facebook button-positive-900">Facebook</button>
-        
-        </div>
-        <!-- -->
     </ion-content>
 </ion-view>

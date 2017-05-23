@@ -1,0 +1,53 @@
+<ion-view view-title="Login" align-title="left">
+    <ion-content style="background: url(img/senha-bg.jpg) center; background-size: cover;">
+        <div class="hero no-header flat">
+            <div class="content">
+                <div class="app-icon"></div>
+                <h1>{{FullSports}}</h1>
+            </div>
+        </div>
+        <div class="padding" style="padding:0px; margin:0px;">
+            <div>
+            	<h4 style="color:#FFF;">Esqueceu a senha?</h4>
+            	<hr />
+            	<p style="color:#CCC; padding-bottom:0px;">Informe seu email ou login e enviaremos instruções para você criar sua senha.</p>
+            </div>
+        </div>
+        <div class="list">
+            <ion-md-input  ng-model="senha.email" style=" padding-top:0px; border:0px solid #CCC;" placeholder="E-mail" highlight-color="balanced" type="text"></ion-md-input>
+            <div class="msgError">{{error}}</div>
+        </div>
+        <div class="padding">
+            <button  ng-click="validaLogin()" class="button button-full button-energized-900 ink">Enviar</button>
+        </div>
+        <script id="templates/senha-modal.html" type="text/ng-template">
+			<ion-modal-view class="ion-modal-view">
+				<ion-header-bar class="bar bar-header button-energized-900">
+					<h1 class="title">Sucesso</h1>
+					<button class="button button-clear button-primary" ng-click="closeModal()"><i class="icon ion-close"></i></button>
+				</ion-header-bar>
+				<ion-content class="padding">
+					<div class="ion-modal-content">
+						<div class="quadro">
+							<div class="texto">
+								<p class="icon"><i class="icon ion-android-hand"></i></p>
+								<p>Tudo pronto, enviamos uma nova senha de acesso para o e-mail:</p>
+								<p class="destaque">{{senha.email}}</p>
+								<p>Sugerimos que ao relalizar o login troque sua senha.</p>
+							</div>
+						</div>
+					</div>
+					<!--button class="button button-full button-positive button-close-modal" ng-click="closeModal()">Fechar</button-->
+				</ion-content>
+				<ion-footer-bar class="bar bar-footer button-energized-900">
+				&nbsp;
+				</ion-footer-bar>
+			</ion-modal-view>
+        </script>
+        <!-- -->
+        <div class="button-footer">
+            <div class="button-corner-right"><a ui-sref="app.login" style="color:#FFF; font-size:36px;"><i class="icon ion-ios-undo"></i></a></div>
+        </div>
+        <!-- -->
+    </ion-content>
+</ion-view>

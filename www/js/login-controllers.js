@@ -31,6 +31,20 @@ angular.module('starter')
         $scope.$parent.hideHeader();
     }, 0);
 	
+	// Set Motion
+    $timeout(function() {
+        ionicMaterialMotion.slideUp({
+            selector: '.slide-up'
+        });
+    }, 100);
+
+    $timeout(function() {
+        ionicMaterialMotion.fadeSlideInRight({
+            startVelocity: 3000
+        });
+    }, 700);
+
+    // Set Ink
     ionicMaterialInk.displayEffect();
 	
 })
