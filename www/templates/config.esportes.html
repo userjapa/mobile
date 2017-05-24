@@ -1,0 +1,63 @@
+<div class="row">
+    <div class="input-field col s4">
+        <div class="configSports configSports-futeboldecampo" ng-click="checkEsporte('esporte_0')">
+            <input type="checkbox" class="configSports-checkbox" id="esporte_0" ng-model="config.esportes[0].status" />
+            <label for="esporte_0"><!--{{config.esportes[0].status}}--></label>
+        </div>
+    </div>
+    <div class="input-field col s4">
+        <div class="configSports configSports-futeboldesalao" ng-click="checkEsporte('esporte_1')">
+            <input type="checkbox" class="configSports-checkbox" id="esporte_1" ng-model="config.esportes[1].status" />
+            <label for="esporte_1"><!--{{config.esportes[1].status}}--></label>
+        </div>
+    </div>
+    <div class="input-field col s4">
+        <div class="configSports configSports-futebolsociety" ng-click="checkEsporte('esporte_2')">
+            <input type="checkbox" class="configSports-checkbox" id="esporte_2" ng-model="config.esportes[2].status" />
+            <label for="esporte_2"><!--{{config.esportes[2].status}}--></label>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="input-field col s4">
+        <div class="configSports configSports-futeboldesete" ng-click="checkEsporte('esporte_3')">
+            <input type="checkbox" class="configSports-checkbox" id="esporte_3" ng-model="config.esportes[3].status" />
+            <label for="esporte_3"><!--{{config.esportes[3].status}}--></label>
+        </div>
+    </div>
+    <div class="input-field col s4">
+        <div class="configSports configSports-voleidepraia" ng-click="checkEsporte('esporte_4')">
+            <input type="checkbox" class="configSports-checkbox" id="esporte_4" ng-model="config.esportes[4].status" />
+            <label for="esporte_4"><!--{{config.esportes[4].status}}--></label>
+        </div>
+    </div>
+    <div class="input-field col s4">
+        <div class="configSports configSports-voleidequadra" ng-click="checkEsporte('esporte_5')">
+            <input type="checkbox" class="configSports-checkbox" id="esporte_5" ng-model="config.esportes[5].status" />
+            <label for="esporte_5"><!--{{config.esportes[5].status}}--></label>
+        </div>
+    </div>
+</div>
+<div class="row" style="margin-bottom:5px;">
+    <div class="input-field col s4">
+        <div class="configSports configSports-voleisentado" ng-click="checkEsporte('esporte_6')">
+            <input type="checkbox" class="configSports-checkbox" id="esporte_6" ng-model="config.esportes[6].status" />
+            <label for="esporte_6"><!--{{config.esportes[6].status}}--></label>
+        </div>
+    </div>
+    <div class="input-field col s4">
+        <div class="configSports configSports-basquete" ng-click="checkEsporte('esporte_7')">
+            <input type="checkbox" class="configSports-checkbox" id="esporte_7" ng-model="config.esportes[7].status" />
+            <label for="esporte_7"><!--{{config.esportes[7].status}}--></label>
+        </div>
+    </div>
+    <div class="input-field col s4">
+        <div class="configSports configSports-basqueteemcadeiraderodas" ng-click="checkEsporte('esporte_8')">
+            <input type="checkbox" class="configSports-checkbox" id="esporte_8" ng-model="config.esportes[8].status" />
+            <label for="esporte_8"><!--{{config.esportes[8].status}}--></label>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <button type="submit" class="btn btn-large btn-block waves-effect waves-light">Atualizar cadastro</button>
+</div>
