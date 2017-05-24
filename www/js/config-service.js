@@ -33,6 +33,16 @@ angular
 												{id:9, status:true}
 											 ]
 							};
+		var userSalas = [
+							{id:1, img:'../img/brasao/bigodegrosso.jpg', nome:'Bigode Grosso', periodo:'Quarta 21h',               esporte:'Futebol de Campo',             url:'app.intro', sexo:'m', acessibilidade:'nao'},
+							{id:2, img:'../img/brasao/dumbartonfc.png',  nome:'Dumbarton FC',  periodo:'Terça e Quinta 20:30h',    esporte:'Futebol de Sete',              url:'app.intro', sexo:'f', acessibilidade:'sim'},
+							{id:3, img:'../img/brasao/escudos.gif',      nome:'escudos',       periodo:'Segunda Quarta Sexta 22h', esporte:'Basquete', 					   url:'app.intro', sexo:'m', acessibilidade:'nao'},
+							{id:4, img:'../img/brasao/guangzhou.png',    nome:'guangzhou',     periodo:'Terça 20h',                esporte:'Volei sentado', 			   url:'app.intro', sexo:'a', acessibilidade:'sim'},
+							{id:5, img:'../img/brasao/madfoz.png',       nome:'madfoz',        periodo:'Quinta 19h30',   		   esporte:'Volei de Praia', 			   url:'app.intro', sexo:'f', acessibilidade:'nao'},
+							{id:6, img:'../img/brasao/manchester.jpg',   nome:'manchester',    periodo:'Domingo 16h', 			   esporte:'Futebol de Salão', 			   url:'app.intro', sexo:'m', acessibilidade:'nao'},
+							{id:7, img:'../img/brasao/unionminas.jpg',   nome:'unionminas',    periodo:'Todos os Dias 19h', 	   esporte:'Basquete em Cadeira de Rodas', url:'app.intro', sexo:'m', acessibilidade:'sim'}
+						];
+	
 		
 		function validaConfig(obj){
 			//console.log(obj);
@@ -44,6 +54,7 @@ angular
 		
 		var configFactory = {
 			userConta     : userConta,
+			userSalas     : userSalas,
 			listaEsportes : listaEsportes,
 			validaConfig  : validaConfig 
 		}

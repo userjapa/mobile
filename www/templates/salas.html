@@ -1,23 +1,10 @@
 <ion-view view-title="Minhas Salas">
     <ion-content ng-class="{expanded:$scope.isExpanded}">
-    	<div class="hero slide-up" style="background-image: url('img/intro-bg.jpg');">
-            <div class="content">
-                <div class="avatar" style="background-image: url('img/letters/a.jpg');"></div>
-                <h3><a class="light">{{config.apelido}}</a></h3>
-                <h4>{{config.nome}}</h4>
-            </div>
-        </div>
-        <div class="tabs tabs-dark tabs-icon-top static">
-            <a ui-sref="app.salas" class="tab-item">
-                <i class="icon ion-chatboxes"></i> Salas
-            </a>
-            <a ui-sref="app.esports" class="tab-item">
-                <i class="icon ion-ios-tennisball"></i> Em Jogo
-            </a>
-            <a ui-sref="app.convites" class="tab-item">
-                <i class="icon ion-email"></i> Convites
-            </a>
-        </div>
+    	<!-- Card Head -->
+        <div class="hero slide-up" style="background-image: url('img/intro-bg.jpg');" ng-include="'templates/fullsports.head.html'"></div>
+        <!-- Card Head Botoes -->
+        <div ng-include="'templates/fullsports.head.botoes.html'"></div>
+        <!-- Conteudo -->
         <div class="content has-header">
         	<div class="list animate-fade-slide-in-right" ng-repeat="sala in salas">
                 <a ui-sref="app.sala({id:sala.id})" class="item item-avatar item-icon-right list-border">
@@ -36,5 +23,6 @@
                 </a>
         	</div>
         </div>
+        <!-- /Conteudo -->
     </ion-content>
 </ion-view>

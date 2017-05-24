@@ -8,15 +8,35 @@ angular.module('starter')
     $scope.isExpanded = false;
     $scope.$parent.setExpanded(false);
     $scope.$parent.setHeaderFab(false);
-	//---------- Set Header ----------
-    
+	
+	/* Efeito motion */
+	//---------- Set Motion ----------
+    $timeout(function() {
+        ionicMaterialMotion.slideUp({
+            selector: '.slide-up'
+        });
+    }, 300);
+
+    $timeout(function() {
+        ionicMaterialMotion.fadeSlideInRight({
+            startVelocity: 3000
+        });
+    }, 700);
+	//---------- Set Ink -------
+    ionicMaterialInk.displayEffect();
+	/* /Efeito motion */
+	
+	//---------- Init ----------
+    $(document).ready(function() {
+		$('select').material_select();
+	});
+	/* /Efeito motion */
 	//---------- Vars ----------
     //Dados da conta do usuario
 	$scope.config = configFactory.userConta;
 	//Lista de esportes disponiveis no sistema
 	$scope.esportes = configFactory.listaEsportes;
-	//---------- /Vars ----------
-    
+	
 	//---------- Funcoes ----------
     /*
 	 *	checkEsporte()
@@ -91,39 +111,6 @@ angular.module('starter')
 		myPopup.close(); //close the popup after 3 seconds for some reason
 		}, 3000);
 	};
+	//---------- /PopUp ----------
 	
-	/** /
-	$scope.showAlert = function(tit,temp) {
-		var alertPopup = $ionicPopup.alert({
-			title: tit,
-			template: temp
-		});
-	
-		alertPopup.then(function(res) {
-			//$location.url("app/intro");
-		});
-	};
-	/**/
- 	//---------- /PopUp ----------
-	
-	// Set Motion
-    $timeout(function() {
-        ionicMaterialMotion.slideUp({
-            selector: '.slide-up'
-        });
-    }, 300);
-
-    $timeout(function() {
-        ionicMaterialMotion.fadeSlideInRight({
-            startVelocity: 3000
-        });
-    }, 700);
-
-    // Set Ink
-    ionicMaterialInk.displayEffect();
-	/**/
-	
-	$(document).ready(function() {
-		$('select').material_select();
-	  });
 });

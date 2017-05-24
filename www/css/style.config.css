@@ -1,3 +1,15 @@
+.collapsible{
+	background-color:#FFF;
+	border:0px solid #666;
+}
+.collapsible-body{
+	padding:0px;
+	margin:0px;
+}
+.collapsible-body .row{
+	margin:0px;
+	padding:0px;
+}
 .btn-block {
    width: 100%;
 }
