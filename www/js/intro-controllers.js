@@ -2,17 +2,15 @@
 angular.module('starter')
 .controller('IntroCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk, configFactory) {
     console.log("IntroController");
-	// Set Header
+	//---------- Set Header ----------
     $scope.$parent.showHeader();
     $scope.$parent.clearFabs();
     $scope.isExpanded = false;
     $scope.$parent.setExpanded(false);
     $scope.$parent.setHeaderFab(false);
 	
-	//config
-	$scope.config = configFactory.userConta;
-	
-	// Set Motion
+	/* Efeito motion */
+	//---------- Set Motion ----------
     $timeout(function() {
         ionicMaterialMotion.slideUp({
             selector: '.slide-up'
@@ -24,8 +22,14 @@ angular.module('starter')
             startVelocity: 3000
         });
     }, 700);
-
-    // Set Ink
+	//---------- Set Ink -------
     ionicMaterialInk.displayEffect();
-	/**/
+	/* /Efeito motion */
+	
+	//---------- Init ----------
+    $(document).ready(function() {
+		$('select').material_select();
+	});
+	/* Efeito motion */
+	
 });
