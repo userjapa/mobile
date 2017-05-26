@@ -1,0 +1,81 @@
+<!-- sala.head -->
+<div>
+    <table>
+    <tr>
+    <td rowspan="2" style="width:10%">
+    	<table>
+        <tr>
+        <td style="padding-left:3px;">
+        {{sala.capacidade}}
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <img src="../img/icons/sexo-{{sala.sexo}}.png" width="20" />
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <img src="../img/icons/publico-{{sala.publica}}.png" width="20" />
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <img src="../img/icons/acessibilidade-{{sala.acessibilidade}}.png" width="20" />
+        </td>
+        </tr>
+        </table>
+    </td>
+    <td style="width:70%">
+        <table>
+        <tr>
+        <td rowspan="4" style="width:90px;">
+            <img src="{{sala.img}}" width="80">
+        </td>
+        <td style="font-size:18px; font-weight:bold;">
+        	{{sala.nome}}
+        </td>
+        </tr>
+        <tr>
+        <td>
+        	{{sala.esporte}}
+        </td>
+        </tr>
+        <tr>
+        <td>
+        	{{sala.periodo}}
+        </td>
+        </tr>
+        <tr>
+        <td>
+        	R$ {{sala.valor}} &nbsp; &nbsp; | &nbsp; &nbsp; R$ {{sala.arrecadado}}
+        </td>
+        </tr>
+        </table>
+    </td>
+    <td style="width:20%">
+    	<table>
+        <tr>
+        <td style="text-align:right;">
+        <!--<div style="float:left;margin-left:10px; border:0px solid #666;"><img src="../img/icons/money.png" width="20"/></div> -->&nbsp; Cota R$ {{sala.cota}}
+        </td>
+        </tr>
+        <tr>
+        <td style="text-align:right; padding-top:10px;">
+        <img src="../img/icons/user-plus.png" width="60" />
+        </td>
+        </tr>
+        </table>
+    </td>
+    </tr>
+    <tr>
+    <td style="padding-left:10%;">
+    <div class="sala-saldo sala-saldo-positivo" style="width:{{saldo.positivo}}%"></div>
+    <div class="sala-saldo sala-saldo-negativo" style="width:{{saldo.negativo}}%"></div>
+    </td>
+    <td>
+    </td>
+    </tr>
+    </table>
+</div>
+<!-- sala.head -->

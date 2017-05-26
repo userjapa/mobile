@@ -4,6 +4,16 @@ h1 {
     text-shadow: 0 1px 0px #000;
     font-size: 42px;
 }
+p {
+    color: #555;
+    margin: 0 0 25px 0;
+}
+table tr td{
+	border: 0px solid #AAA; 
+	padding:0px;
+	margin:0px;
+	vertical-align:top;
+}
 
 /* Utilities */
 .title-bordered {
@@ -11,10 +21,6 @@ h1 {
     padding-top: 30px;
 }
 
-p {
-    color: #555;
-    margin: 0 0 25px;
-}
 
 .scroll {
     height: 100%;

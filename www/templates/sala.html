@@ -4,13 +4,30 @@
         <div class="hero slide-up" style="background-image: url('img/intro-bg.jpg');" ng-include="'templates/fullsports.head.html'"></div>
         <!-- Card Head Botoes -->
         <div ng-include="'templates/fullsports.head.botoes.html'"></div>
-        <!-- Conteudo -->
+        <!-- Sala Info -->
         <div class="content has-header sala-head">
-        	<div class="list animate-fade-slide-in-right">
+        	<div class="list animate-fade-slide-in-right" style="margin:0px; padding:0px;">
                 <div class="item">
-                	<div ng-include="'templates/sala.head.html'"></div>
+                	<div ng-include="'templates/sala.info.html'"></div>
         		</div>
         	</div>
         </div>
+        <!-- Sala Participantes -->
+        <div class="content has-header sala-head">
+        	<div class="list animate-fade-slide-in-right" style="margin:0px; padding:0px;">
+                <div class="item">
+                	<div ng-include="'templates/sala.participantes.html'"></div>
+        		</div>
+        	</div>
+        </div>
+        <!-- Sala Bate-Papo -->
+        <div class="content has-header sala-head">
+        	<div class="list animate-fade-slide-in-right" style="margin:0px; padding:0px;">
+                <div class="item">
+                	<div ng-include="'templates/sala.batepapo.html'"></div>
+        		</div>
+        	</div>
+        </div>
+        
     </ion-content>
 </ion-view>

@@ -7,4 +7,17 @@
 	position:relative;
 	top:0px;
 }
+.sala-saldo{
+	border:0px solid #AAA;
+	height:8px;
+	float:left;
+}
+.sala-saldo-positivo{
+	width:0%;
+	background-color:#1976d2;
+}
+.sala-saldo-negativo{
+	width:0%;
+	background-color:#ff8a80;
+}
 /**/

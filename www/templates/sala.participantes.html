@@ -1,0 +1,60 @@
+<!-- sala.head -->
+<div style="border-bottom:1px solid #CCC;">
+<table>
+    <tbody>
+    <tr>
+    <td style="width:45%; text-align:center;">
+        Equipe A
+    </td>
+    <td style="width:10%">
+    </td>
+    <td style="width:45%; text-align:center;">
+        Equipe B
+    </td>
+    </tr>
+    </tbody>
+</table>
+</div>
+<div style="border:0px solid #F00; overflow:auto; height:200px;">
+    <table>
+        <tbody>
+        <tr>
+        <td style="width:45%">
+        	<table>
+            	<tr ng-repeat="a in participantes.a" style="border-bottom:1px solid #CCC;">
+                <td style="font-size:70px; color:#009; width:50px;">
+                	<i class="icon ion-person"></i>
+                </td>
+                <td>
+                <div style="font-size:18px; font-weight:bold;">{{a.apelido}}</div>
+                <div>
+                    <div style="float:left">{{a.sexo}}</div>
+                    <div style="float:right">{{a.rank}}</div>
+                </div>
+                </td>
+                </tr>
+            </table>
+        </td>
+        <td style="width:10%">
+        </td>
+        <td style="width:45%">
+        	<table>
+            	<tr ng-repeat="b in participantes.b" style="border-bottom:1px solid #CCC;">
+                <td>
+                <div style="font-size:18px; font-weight:bold; text-align:right;">{{b.apelido}}</div>
+                <div>
+                    <div style="float:left">{{b.rank}}</div>
+                    <div style="float:right">{{b.sexo}}</div>
+                </div>
+                </td>
+                <td style="font-size:70px; color:#900; width:50px;">
+                	<i class="icon ion-person"></i>
+                </td>
+                </tr>
+            </table>
+        </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!-- sala.head -->

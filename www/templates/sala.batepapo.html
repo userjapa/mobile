@@ -1,0 +1,25 @@
+<!-- sala.head -->
+<div style="border-top:1px solid #CCC;">
+<table>
+    <tbody>
+    <tr>
+    <td style="width:100%; text-align:left;">
+        Bate-papo
+    </td>
+    </tr>
+    </tbody>
+</table>
+</div>
+<div style="border-top:1px solid #ccc; border-bottom:1px solid #ccc; overflow:auto; height:200px;">
+	<div ng-repeat="msg in mensagens">
+        <div class="z-depth-1" style="max-width:70%; border:0px solid #999; border-radius:8px; background-color:#FFC; margin:8px; padding:8px;">
+            <div style="font-weight:bold; color:#666;">
+                {{msg.apelido}}
+            </div>
+            <div style="white-space:normal;font-weight:normal; color:#222; padding:5px;">
+                {{msg.mensagem}}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- sala.head -->
